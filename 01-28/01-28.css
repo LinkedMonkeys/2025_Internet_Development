@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+
+body {
+    background-image: radial-gradient(circle, purple, gold);
+    /* background-image: radial-gradient(circle, #0000 45%, #000f 48%),
+  radial-gradient(ellipse farthest-corner, #fc1c14 20%, #cf15cf 80%); */
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* font-size: 2em; */
+    font-family: 'Playwrite IN',Arial,sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+ul {
+    /* background-color: #ff00ff; */
+    background-image: url("images/matocha.jpg");
+
+    color: white;
+}
+
+li {
+    font-style: italic;
+    font-weight: bold;
+}
+
+li, h1, h2, h3 {
+    border-width: 2px;
+    border-style: solid;
+    border-top-width: 20px;
+}
+
+li {
+    border-color: greenyellow;
+    font-weight: normal;
+}
+
+h1, h2, h3 {
+    border-color: pink;
+}
