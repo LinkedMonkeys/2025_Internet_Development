@@ -1,0 +1,35 @@
+header {
+    /* background-color: blue; */
+}
+
+menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  width: 400px;
+}
+
+menu > li {
+    border: solid 2px black;
+}
+
+div {
+    background-color: blue;
+}
+
+span {
+    font-style: italic;
+}
+
+#footer {
+    color: red;
+}
+
+.important {
+    color: green;
+}
+
+li.important {
+    background-color: yellow;
+}
+
