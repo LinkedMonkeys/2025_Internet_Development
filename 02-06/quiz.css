@@ -1,0 +1,29 @@
+h1 {
+    background-color: yellow;
+    color: blue;
+    border: 2px solid red;
+    padding: 10px;
+    margin-left: 40px;
+    
+}
+
+main p {
+    width: 40%;
+    /* height: 100px; */
+    color: red;
+}
+
+menu {
+    display: flex;
+    list-style: none;
+    justify-content:initial; /* Along the main axis (horizontal). */
+    flex-wrap: wrap;
+}
+
+menu > li {
+    border: 1px solid black;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 2px;
+    width: 100px;
+}
