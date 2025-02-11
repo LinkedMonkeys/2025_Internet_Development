@@ -1,0 +1,56 @@
+body {
+    margin: 0px;
+}
+
+#inner {
+    background-color: salmon;
+
+    /* border-color: pink;
+    border-style: solid;
+    border-width: 50px; */
+
+    border: 50px solid pink;
+
+    width: 200px;
+    height: 200px;
+}
+
+#outer {
+    background-color: teal;
+    margin: auto;
+    padding: 50px;
+    width: 300px;
+}
+
+header {
+    background-color: paleturquoise;
+    padding-bottom: 1em;
+}
+
+menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+menu > li {
+    background-color: teal;
+    border-radius: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+main {
+    display: flex;
+}
+
+nav {
+    flex: 1;
+}
+
+article {
+    flex: 4;
+}
