@@ -14,7 +14,9 @@
         let die = document.getElementById('die');
         die.src = `kenney_board_game_assets/PNG/Dice/dieWhite_border${dieRoll}.png`;
 
-        let roundScore = document.getElementById('round-score');
+        //let roundScore = document.getElementById('round-score');
+        //let roundScore = id('round-score');
+        let roundScore = qs('#round-score');
         if (dieRoll != 6) {
             roundScore.textContent = parseInt(roundScore.textContent) + dieRoll;
         } else {
