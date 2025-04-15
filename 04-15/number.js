@@ -6,6 +6,27 @@
     function init() {
         const getFact = id('get-fact');
         getFact.addEventListener('click', goGetFact);
+        
+        const getDateFact = id('get-date-fact');
+        getDateFact.addEventListener('click', goGetDateFact);
+    }
+
+    function goGetDateFact() {
+        const dayInput = id('day');
+        const monthInput = id('month');
+
+        const url = `http://numbersapi.com/${monthInput.value}/${dayInput.value}/date`;
+        fetch(url)
+            .then(statusCheck)
+            .then((response) => response.text())
+            .then(showDateFact)
+            .catch(numberError);
+    }
+
+    function showDateFact(response) {
+        const dateFactContainer = id('date-fact-container');
+        
+        dateFactContainer.textContent = response;
     }
 
     function goGetFact() {
