@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="weather.css">
+    <script src="apiKey.js"></script>
+    <script src="weather.js"></script>
+</head>
+<body>
+
+    <div id="input">
+        <p>Your zip code: <input type="text" id="zip-code"></p><button id="get-weather">Get weather</button>
+    </div>
+
+    <div id="weather" class="hidden">
+        <h1 id="display-name"></h1>
+        
+        <div id="forecast-region"></div>
+    
+        <h2>Credits</h1>
+            <ul>
+                <li>Zip code to Lat/Long with <a href="https://geocode.maps.co/">Geocode Maps free API</a>.</li>
+                <li>Current weather data from <a href="https://open-meteo.com/">Open-meteo's free API</a>.</li>
+                <li>Weather icons from <a href="https://github.com/visualcrossing/WeatherIcons">Visual Crossing's GitHub</a>.</li>
+            </ul>
+    </div>
+
+</body>
+</html>
