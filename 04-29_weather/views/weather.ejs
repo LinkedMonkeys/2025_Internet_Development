@@ -1,0 +1,59 @@
+<%
+    const images = new Map([[0, 'clear-day'],
+    [1, 'partly-cloudy-day'], [2, 'partly-cloudy-day'], [3, 'cloudy'],
+    [45, 'fog'], [48, 'fog'],
+    [51, 'showers-day'], [53, 'showers-day'], [55, 'showers-day'],
+    [61, 'showers-day'], [63, 'rain'], [65, 'rain'],
+    [66, 'rain-snow-showers-day'], [67, 'rain-snow-showers-day'],
+    [71, 'snow-showers-day'], [73, 'snow'], [75, 'snow'],
+    [77, 'snow-showers-day'],
+    [80, 'showers-day'], [81, 'showers-day'], [82, 'showers-day'],
+    [95, 'thunder-rain'],
+    [96, 'thunder-rain'], [99, 'thunder-rain']
+    ]);
+
+    const code = new Map([[0, 'Clear sky'],
+        [1, 'Mainly clear'], [2, 'Partly cloudy'], [3, 'Overcast'],
+        [45, 'Fog'], [48, 'Depositing rime fog'],
+        [51, 'Drizzle: light'], [53, 'Drizzle: moderate'], [55, 'Drizzle: heavy'],
+        [61, 'Rain: light'], [63, 'Rain: moderate'], [65, 'Rain: heavy'],
+        [66, 'Freezing rain: light'], [67, 'Freezing rain: heavy'],
+        [71, 'Snow fall: slight'], [73, 'Snow fall: moderate'], [75, 'Snow fall: heavy'],
+        [77, 'Snow grains'],
+        [80, 'Rain showers: slight'], [81, 'Rain showers: moderate'], [82, 'Rain showers: violent'],
+        [95, 'Thunderstorm: slight or moderate'],
+        [96, 'Thunderstorm with slight hail'], [99, 'Thunderstorm with heavy hail']
+    ]);
+
+%>
+
+<% function buildWeatherCard(day, lo, hi, weatherCode) { %>
+    <div class="card">
+        <p class="day"><%= day %></p>
+        <img src=<%= `../images/${images.get(weatherCode)}.png` %> >
+        <p><%= `${lo}°F / ${hi}°F`%></p>
+        <p class="forecast"><%= code.get(weatherCode) %></p>
+    </div>
+<% }%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../weather.css">
+</head>
+<body>
+    <h1><%= location %></h1>
+    <div id="forecast-region">
+        <% for (let i=0; i<date.length; i++) {
+            const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dateArr = date[i].split('-');
+            const dayOfWeek = new Date(parseInt(dateArr[0]), parseInt(dateArr[1])-1, parseInt(dateArr[2]));
+            %>
+            <%= buildWeatherCard(dayNames[dayOfWeek.getDay()], mintemp[i], maxtemp[i], weather_code[i]) %>
+        <% } %>
+    </div>
+</body>
+</html>
